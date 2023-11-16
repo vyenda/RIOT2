@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 1508424808}
   - component: {fileID: 1508424807}
   - component: {fileID: 1508424811}
+  - component: {fileID: 1508424812}
   m_Layer: 0
   m_Name: Enemy L1D1
   m_TagString: EnemyL1D1
@@ -549,6 +550,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &1508424812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508424806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ca0d22e77a75745a2110cdddba307e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minX: -18
+  maxX: 18
+  goingLeft: 1
 --- !u!1 &1562920040
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +690,8 @@ MonoBehaviour:
   speed: 10
   jumpForce: 1
   health: 100
+  minX: -18
+  maxX: 18
 --- !u!54 &1562920046
 Rigidbody:
   m_ObjectHideFlags: 0

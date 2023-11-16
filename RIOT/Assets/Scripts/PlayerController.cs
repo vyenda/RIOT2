@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPos;
     public float jumpForce = 10f;
     public float health = 100f;
+
+    //these make it so the player can't go off the screen
+    public float minX = -18f;
+    public float maxX = 18f;
+    private Vector3 temp;
     
     // Start is called before the first frame update
     void Start()
