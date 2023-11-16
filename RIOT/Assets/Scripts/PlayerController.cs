@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPos;
     public float jumpForce = 10f;
     public float health = 100f;
+
+    public float enemyL1D1Damage = 5f;
 
     //these make it so the player can't go off the screen
     public float minX = -18f;
@@ -60,6 +63,18 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// codes for what happens when the player touches a tagged game object
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyL1D1")
+        {
+            health -= enemyL1D1Damage;
+        }
+    }
+
+    /// <summary>
     /// codes for the player jumping; they have to touch the ground before jumping
     /// </summary>
     private void HandleJump()
@@ -88,7 +103,7 @@ public class PlayerController : MonoBehaviour
     {
         if (health <= 0)
         {
-            //add a scene transition here when UI has been created
+            SceneManager.LoadScene(3);
             Debug.Log("The player died. Game over.");
         }
     }

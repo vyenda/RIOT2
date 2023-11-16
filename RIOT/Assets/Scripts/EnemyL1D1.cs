@@ -15,6 +15,8 @@ public class EnemyL1D1 : MonoBehaviour
     private float dist;
     public float health = 100f;
 
+    public float playerDamage = 15f;
+
     //makes it so the enemy can't go off screen
     public float minX = -18f;
     public float maxX = 18f;
@@ -33,6 +35,18 @@ public class EnemyL1D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+    }
+
+    /// <summary>
+    /// codes for what happens when the enemy interacts with game objects
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            health -= playerDamage;
+        }
     }
 
     /// <summary>
@@ -78,6 +92,7 @@ public class EnemyL1D1 : MonoBehaviour
             Debug.Log("You killed the first enemy.");
             //maybe add a waiting IEnumerator for 5 seconds
             //before moving to the next screen/level?
+            //code for the scene transition here
         }
     }
 }

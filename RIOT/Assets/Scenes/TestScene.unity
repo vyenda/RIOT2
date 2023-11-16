@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  health: 100
   minX: -18
   maxX: 18
   goingLeft: 1
@@ -582,7 +583,7 @@ GameObject:
   - component: {fileID: 1562920045}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 1
   health: 100
+  enemyL1D1Damage: 5
   minX: -18
   maxX: 18
 --- !u!54 &1562920046
