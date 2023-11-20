@@ -18,8 +18,8 @@ public class EnemyL1D1 : MonoBehaviour
     public float playerDamage = 15f;
 
     //makes it so the enemy can't go off screen
-    public float minX = -18f;
-    public float maxX = 18f;
+    public float minX = -17f;
+    public float maxX = 17f;
     private Vector3 temp;
 
     public bool goingLeft = true;
@@ -33,7 +33,7 @@ public class EnemyL1D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
         EnemyHealth();
     }
 
@@ -52,7 +52,7 @@ public class EnemyL1D1 : MonoBehaviour
     /// <summary>
     /// codes for enemy movement
     /// </summary>
-    private void Move()
+    /*private void Move()
     {
         if (goingLeft)
         {
@@ -74,15 +74,15 @@ public class EnemyL1D1 : MonoBehaviour
         }
 
         transform.position += temp * Time.deltaTime * speed;
-    }
+    }*/
 
     /// <summary>
     /// makes the enemy move randomly
     /// </summary>
-    private void SetRandomDirectionSwitch()
+    /*private void SetRandomDirectionSwitch()
     {
         dist = Random.Range(minX, maxX);
-    }
+    }*/
 
     private void EnemyHealth()
     {

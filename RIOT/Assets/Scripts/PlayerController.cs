@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float health = 100f;
 
+    public bool shield = false;
+    public bool recharge = false;
+
     public float enemyL1D1Damage = 5f;
 
     //these make it so the player can't go off the screen
@@ -55,7 +58,17 @@ public class PlayerController : MonoBehaviour
         //if space bar is pressed
         if (Input.GetKey(KeyCode.Space))
         {
+            //the player will jump
             HandleJump();
+        }
+
+        //if S is pressed
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            //the player will have the shield for 3 seconds
+            StartCoroutine(Shield(3));
+            //after the 3 seconds, shield will recharge for 5 before use again
+            StartCoroutine(Recharge(13));
         }
 
         //tracks the player's health to see if they are dead or not
@@ -68,10 +81,14 @@ public class PlayerController : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "EnemyL1D1")
+        if (!shield)
         {
-            health -= enemyL1D1Damage;
+            if (other.gameObject.tag == "EnemyL1D1")
+            {
+                health -= enemyL1D1Damage;
+            }
         }
+
     }
 
     /// <summary>
@@ -94,6 +111,30 @@ public class PlayerController : MonoBehaviour
             //if the ground is not there, then they can't
             Debug.Log("The player can't jump.");
         }
+    }
+
+    /// <summary>
+    /// allows the player to use the sheild to not take damage for 3 seconds
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Shield(float secondsToWait)
+    {
+        shield = true;
+        yield return new WaitForSeconds(secondsToWait);
+        shield = false;
+    }
+
+    /// <summary>
+    /// "recharges" the sheild before it can be used again
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Recharge(float secondsToWait)
+    {
+        recharge = true;
+        yield return new WaitForSeconds(secondsToWait);
+        recharge = false;
     }
 
     /// <summary>
