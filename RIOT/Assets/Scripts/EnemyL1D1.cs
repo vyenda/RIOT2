@@ -5,7 +5,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/16/2023]
+ * Date Last Modified: [11/20/2023]
  * Codes for the first level, first difficulty enemy
  */
 
