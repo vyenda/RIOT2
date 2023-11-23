@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/20/2023]
+ * Date Last Modified: [11/22/2023]
  * Codes for the first level, first difficulty enemy
  */
 
@@ -33,7 +32,7 @@ public class EnemyL1D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move();
+        Move();
         EnemyHealth();
     }
 
@@ -52,7 +51,7 @@ public class EnemyL1D1 : MonoBehaviour
     /// <summary>
     /// codes for enemy movement
     /// </summary>
-    /*private void Move()
+    private void Move()
     {
         if (goingLeft)
         {
@@ -74,15 +73,15 @@ public class EnemyL1D1 : MonoBehaviour
         }
 
         transform.position += temp * Time.deltaTime * speed;
-    }*/
+    }
 
     /// <summary>
     /// makes the enemy move randomly
     /// </summary>
-    /*private void SetRandomDirectionSwitch()
+    private void SetRandomDirectionSwitch()
     {
         dist = Random.Range(minX, maxX);
-    }*/
+    }
 
     private void EnemyHealth()
     {
