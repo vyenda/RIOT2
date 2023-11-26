@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Recharge(13));
         }
 
+        //makes it so player can't heal past 100
         if (healthPoints > health)
         {
             healthPoints = health;
