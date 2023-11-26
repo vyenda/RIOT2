@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/20/2023]
- * Codes for the player movement
+ * Date Last Modified: [11/26/2023]
+ * Codes for the player movement, and more.
  */
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 startPos;
     public float jumpForce = 10f;
     public float health = 100f;
+    public float healthPoints = 100f;
 
     public bool shield = false;
     public bool recharge = false;
@@ -71,6 +72,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Recharge(13));
         }
 
+        if (healthPoints > health)
+        {
+            healthPoints = health;
+        }
+
         //tracks the player's health to see if they are dead or not
         GameOver();
     }
@@ -89,6 +95,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (other.gameObject.tag == "HealthPickup")
+        {
+            healthPoints += other.gameObject.GetComponent<Pickup>().playerHeal;
+        }
     }
 
     /// <summary>
@@ -142,7 +152,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void GameOver()
     {
-        if (health <= 0)
+        if (healthPoints <= 0)
         {
             SceneManager.LoadScene(3);
             Debug.Log("The player died. Game over.");

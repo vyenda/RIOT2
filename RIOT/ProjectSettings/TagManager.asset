@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnemyL1D1
+  - HealthPickup
   layers:
   - Default
   - TransparentFX
