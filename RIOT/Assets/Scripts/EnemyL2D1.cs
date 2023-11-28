@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Authors: Arellano, Angeleen; Strong, Hannah
+ * Last Modified: 11/28/2023
+ * Controls the Level 2 Difficulty 1 Enemy
+ */
+
 public class L2D1Enemy : MonoBehaviour
 {
+
+    public GameObject playerTarget;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +23,6 @@ public class L2D1Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, playerTarget.transform.position, speed * Time.deltaTime);
     }
 }

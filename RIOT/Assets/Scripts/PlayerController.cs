@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
 
         //if the ground is there
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.3f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.8f))
         {
             //they can jump
             rigidbodyRef.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
