@@ -42,7 +42,7 @@ public class EnemyL1D1 : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "PlayerArm")
         {
             health -= playerDamage;
         }
