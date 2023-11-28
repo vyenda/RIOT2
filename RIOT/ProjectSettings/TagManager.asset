@@ -4,13 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyL1D1
-  - HealthPickup
-<<<<<<< Updated upstream
-  - PlayerArm
-=======
-  - EnemyL2D1
->>>>>>> Stashed changes
+  - L2D1Enemy
   layers:
   - Default
   - TransparentFX

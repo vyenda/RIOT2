@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 312269705}
   m_Layer: 0
   m_Name: L2D1Bat
-  m_TagString: Untagged
+  m_TagString: L2D1Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
