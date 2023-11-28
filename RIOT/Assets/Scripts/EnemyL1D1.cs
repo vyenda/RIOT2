@@ -32,7 +32,7 @@ public class EnemyL1D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
         EnemyHealth();
     }
 

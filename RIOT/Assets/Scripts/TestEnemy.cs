@@ -12,8 +12,6 @@ public class NewBehaviourScript : MonoBehaviour
     public float maxX = 26f;
     private Vector3 temp;
 
-    //shortend version of moving code in PlayerController script
-    //private Vector3 moveDirection = Vector3.right;
 
     //the second the game starts, tree will always go right
     public bool goingRight = true;

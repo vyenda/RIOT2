@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/26/2023]
+ * Date Last Modified: [11/28/2023]
  * Codes for the player movement, and more.
  */
 
@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public float minX = -18f;
     public float maxX = 18f;
     private Vector3 temp;
+
+    //for animations
+    public Animation armAnimation;
     
     // Start is called before the first frame update
     void Start()
@@ -76,6 +79,11 @@ public class PlayerController : MonoBehaviour
         if (healthPoints > health)
         {
             healthPoints = health;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            armAnimation.Play("ArmAnimation");
         }
 
         //tracks the player's health to see if they are dead or not
