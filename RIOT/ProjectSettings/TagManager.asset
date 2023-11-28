@@ -6,7 +6,11 @@ TagManager:
   tags:
   - EnemyL1D1
   - HealthPickup
+<<<<<<< Updated upstream
   - PlayerArm
+=======
+  - EnemyL2D1
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
