@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - L2D1Enemy
+  - Undefined
+  - PlayerArm
+  - L1D1Enemy
   layers:
   - Default
   - TransparentFX
