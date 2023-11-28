@@ -1231,6 +1231,7 @@ MonoBehaviour:
   enemyL1D1Damage: 5
   minX: -18
   maxX: 18
+  armAnimation: {fileID: 0}
 --- !u!1 &424720838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2401,7 @@ GameObject:
   - component: {fileID: 989077958}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: EnemyL2D1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4313,7 +4314,7 @@ GameObject:
   - component: {fileID: 2005373321}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: EnemyL2D1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4529,7 +4530,7 @@ GameObject:
   - component: {fileID: 2106941628}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: EnemyL2D1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
