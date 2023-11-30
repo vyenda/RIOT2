@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     public float enemyL1D1Damage = 5f;
 
+    public GameObject bulletPrefab;
+    public bool shootRight = false;
+
     //these make it so the player can't go off the screen
     public float minX = -18f;
     public float maxX = 18f;
@@ -75,6 +78,11 @@ public class PlayerController : MonoBehaviour
             //after the 3 seconds, shield will recharge for 5 before use again
             //StartCoroutine(Recharge(13));
         }
+
+        /*if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ShootBullet();
+        }*/
 
         //makes it so player can't heal past 100
         if (healthPoints > health)
@@ -137,6 +145,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("The player can't jump.");
         }
     }
+
+    /*private void ShootBullet()
+    {
+        GameObject bulletInstance = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bulletInstance.GetComponent<Bullet>().goingRight = shootRight;
+    }*/
 
     /// <summary>
     /// allows the player to use the sheild to not take damage for 3 seconds

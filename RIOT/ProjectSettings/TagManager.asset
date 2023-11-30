@@ -9,6 +9,7 @@ TagManager:
   - PlayerArm
   - L1D1Enemy
   - PlayerSword
+  - Bullet
   layers:
   - Default
   - TransparentFX
