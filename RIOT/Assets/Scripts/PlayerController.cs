@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     //for animations
     public Animation armAnimation;
+    public Animation swordAnimation;
     
     // Start is called before the first frame update
     void Start()
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
             //the player will have the shield for 3 seconds
             StartCoroutine(Shield(3));
             //after the 3 seconds, shield will recharge for 5 before use again
-            StartCoroutine(Recharge(13));
+            //StartCoroutine(Recharge(13));
         }
 
         //makes it so player can't heal past 100
@@ -84,6 +85,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             armAnimation.Play("ArmAnimation");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            swordAnimation.Play("SwordAnimation");
         }
 
         //tracks the player's health to see if they are dead or not
@@ -98,7 +104,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!shield)
         {
-            if (other.gameObject.tag == "EnemyL1D1")
+            if (other.gameObject.tag == "L1D1Enemy")
             {
                 health -= enemyL1D1Damage;
             }
@@ -139,9 +145,14 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     IEnumerator Shield(float secondsToWait)
     {
-        shield = true;
-        yield return new WaitForSeconds(secondsToWait);
-        shield = false;
+        if (!recharge)
+        {
+            shield = true;
+            yield return new WaitForSeconds(secondsToWait);
+            shield = false;
+            StartCoroutine(Recharge(13));
+        }
+        
     }
 
     /// <summary>

@@ -15,6 +15,7 @@ public class EnemyL1D1 : MonoBehaviour
     public float health = 100f;
 
     public float playerDamage = 15f;
+    public float swordDamage = 20f;
 
     //makes it so the enemy can't go off screen
     public float minX = -17f;
@@ -45,6 +46,11 @@ public class EnemyL1D1 : MonoBehaviour
         if (other.gameObject.tag == "PlayerArm")
         {
             health -= playerDamage;
+        }
+
+        if (other.gameObject.tag == "PlayerSword")
+        {
+            health -= swordDamage;
         }
     }
 

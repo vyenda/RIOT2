@@ -8,6 +8,7 @@ TagManager:
   - Undefined
   - PlayerArm
   - L1D1Enemy
+  - PlayerSword
   layers:
   - Default
   - TransparentFX
