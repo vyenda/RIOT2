@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/22/2023]
+ * Date Last Modified: [11/30/2023]
  * Codes for the first level, first difficulty enemy
  */
 
@@ -19,11 +20,11 @@ public class EnemyL1D1 : MonoBehaviour
     public float gunDamage = 25f;
 
     //makes it so the enemy can't go off screen
-    public float minX = -17f;
-    public float maxX = 17f;
+    public float minX = -26f;
+    public float maxX = 26f;
     private Vector3 temp;
 
-    public bool goingLeft = true;
+    public bool goingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class EnemyL1D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
         EnemyHealth();
     }
 
@@ -60,7 +61,37 @@ public class EnemyL1D1 : MonoBehaviour
         }*/
     }
 
-    
+    private void Move()
+    {
+        if (goingRight)
+        {
+            if (transform.position.x >= -dist)
+            {
+                temp = Vector3.left;
+                SetRandomDirectionSwitch();
+                goingRight = false;
+            }
+        }
+        else
+        {
+            if (transform.position.x <= dist)
+            {
+                temp = Vector3.right;
+                SetRandomDirectionSwitch();
+                goingRight = true;
+            }
+        }
+
+
+
+        transform.position += temp * Time.deltaTime * speed;
+
+    }
+
+    private void SetRandomDirectionSwitch()
+    {
+        dist = Random.Range(minX, maxX);
+    }
 
     private void EnemyHealth()
     {
