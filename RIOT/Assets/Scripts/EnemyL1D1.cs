@@ -34,7 +34,7 @@ public class EnemyL1D1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move();
+        
         EnemyHealth();
     }
 
@@ -60,40 +60,7 @@ public class EnemyL1D1 : MonoBehaviour
         }*/
     }
 
-    /// <summary>
-    /// codes for enemy movement
-    /// </summary>
-    private void Move()
-    {
-        if (goingLeft)
-        {
-            if (transform.position.x >= -dist)
-            {
-                temp = Vector3.right;
-                SetRandomDirectionSwitch();
-                goingLeft = false;
-            }
-        }
-        else
-        {
-            if (transform.position.x <= dist)
-            {
-                temp = Vector3.left;
-                SetRandomDirectionSwitch();
-                goingLeft = true;
-            }
-        }
-
-        transform.position += temp * Time.deltaTime * speed;
-    }
-
-    /// <summary>
-    /// makes the enemy move randomly
-    /// </summary>
-    private void SetRandomDirectionSwitch()
-    {
-        dist = Random.Range(minX, maxX);
-    }
+    
 
     private void EnemyHealth()
     {
