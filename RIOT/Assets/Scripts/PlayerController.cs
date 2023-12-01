@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool recharge = false;
 
     public float enemyL1D1Damage = 5f;
+    public GameObject effect;
 
     public GameObject bulletPrefab;
     public bool shootRight = false;
@@ -116,6 +117,12 @@ public class PlayerController : MonoBehaviour
             {
                 health -= enemyL1D1Damage;
             }
+        }
+
+        if (other.tag == "L2D1Enemy")
+        {
+            Instantiate(effect, transform.position, Quaternion.identity);
+            healthPoints -= 15f;
         }
 
         if (other.gameObject.tag == "HealthPickup")

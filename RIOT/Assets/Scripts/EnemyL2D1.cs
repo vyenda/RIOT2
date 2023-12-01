@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
  * Authors: Arellano, Angeleen; Strong, Hannah
- * Last Modified: 11/28/2023
+ * Last Modified: 11/30/2023
  * Controls the Level 2 Difficulty 1 Enemy
  */
 
@@ -13,6 +13,7 @@ public class L2D1Enemy : MonoBehaviour
 
     public GameObject playerTarget;
     public float speed;
+    public float enemyHealthPoints = 100f;
 
     // Start is called before the first frame update
     void Start()
