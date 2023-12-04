@@ -5,7 +5,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/30/2023]
+ * Date Last Modified: [12/04/2023]
  * Codes for the first level, first difficulty enemy
  */
 
@@ -26,10 +26,13 @@ public class EnemyL1D1 : MonoBehaviour
 
     public bool goingRight = true;
 
+    public bool guard = false;
+    public bool recharge = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Recharge(13));
     }
 
     // Update is called once per frame
@@ -45,14 +48,17 @@ public class EnemyL1D1 : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerArm")
+        if (!guard)
         {
-            health -= playerDamage;
-        }
+            if (other.gameObject.tag == "PlayerArm")
+            {
+                health -= playerDamage;
+            }
 
-        if (other.gameObject.tag == "PlayerSword")
-        {
-            health -= swordDamage;
+            if (other.gameObject.tag == "PlayerSword")
+            {
+                health -= swordDamage;
+            }
         }
 
         /*if (other.gameObject.tag == "Bullet")
@@ -61,6 +67,9 @@ public class EnemyL1D1 : MonoBehaviour
         }*/
     }
 
+    /// <summary>
+    /// Codes for the enemy's random movement
+    /// </summary>
     private void Move()
     {
         if (goingRight)
@@ -88,11 +97,43 @@ public class EnemyL1D1 : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Makes the enemy's movements more random
+    /// </summary>
     private void SetRandomDirectionSwitch()
     {
         dist = Random.Range(minX, maxX);
     }
 
+    /// <summary>
+    /// codes for the enemy's guarding ability
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Guard(float secondsToWait)
+    {
+        guard = true;
+        yield return new WaitForSeconds(secondsToWait);
+        guard = false;
+        StartCoroutine(Recharge(13));
+    }
+
+    /// <summary>
+    /// pauses the enemy's guarding
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Recharge(float secondsToWait)
+    {
+        recharge = true;
+        yield return new WaitForSeconds(secondsToWait);
+        recharge = false;
+        StartCoroutine(Guard(3));
+    }
+
+    /// <summary>
+    /// tracks the enemy's health. If it gets at or below 0, it will die
+    /// </summary>
     private void EnemyHealth()
     {
         if (health <= 0)
