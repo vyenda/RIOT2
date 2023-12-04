@@ -929,6 +929,8 @@ MonoBehaviour:
   minX: -17
   maxX: 17
   goingRight: 1
+  guard: 0
+  recharge: 0
 --- !u!1 &1549639676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1133,7 @@ MonoBehaviour:
   shield: 0
   recharge: 0
   enemyL1D1Damage: 5
+  effect: {fileID: 0}
   bulletPrefab: {fileID: 1309680358834734448, guid: 10e3b2389da53f24b844a219192b04e8, type: 3}
   shootRight: 0
   minX: -18
@@ -1283,7 +1286,7 @@ GameObject:
   - component: {fileID: 1875585308}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: EnemyArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1318,7 +1321,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
