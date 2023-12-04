@@ -29,10 +29,16 @@ public class EnemyL1D1 : MonoBehaviour
     public bool guard = false;
     public bool recharge = false;
 
+    public bool attack = false;
+    public bool pause = false;
+
+    public Animation enemyArm;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Recharge(13));
+        StartCoroutine(Pause(2));
     }
 
     // Update is called once per frame
@@ -103,6 +109,46 @@ public class EnemyL1D1 : MonoBehaviour
     private void SetRandomDirectionSwitch()
     {
         dist = Random.Range(minX, maxX);
+    }
+
+    /// <summary>
+    /// causes the enemy to periodically attack the player
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Attack(float secondsToWait)
+    {
+        attack = true;
+        HitPlayer();
+        yield return new WaitForSeconds(secondsToWait);
+        attack = false;
+        StartCoroutine(Pause(2));
+    }
+
+    /// <summary>
+    /// causes the enemy to pause from attacking the player
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Pause(float secondsToWait)
+    {
+        pause = true;
+        yield return new WaitForSeconds(secondsToWait);
+        pause = false;
+        StartCoroutine(Attack(2));
+    }
+    //maybe in the future we can try a raycast so that the enemy doesn't start the
+    //attack coroutine unless the player game object is nearby
+
+    /// <summary>
+    /// starts the enemy attack animation 
+    /// </summary>
+    private void HitPlayer()
+    {
+        if (attack)
+        {
+            enemyArm.Play("EnemyArm");
+        }
     }
 
     /// <summary>

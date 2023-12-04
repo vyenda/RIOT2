@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!shield)
         {
-            if (other.gameObject.tag == "L1D1Enemy")
+            if (other.gameObject.tag == "EnemyArm")
             {
                 health -= enemyL1D1Damage;
             }
