@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public float health = 100f;
     public float healthPoints = 100f;
 
+    public bool facingRight = true;
+
     public bool shield = false;
     public bool recharge = false;
 
@@ -55,6 +57,8 @@ public class PlayerController : MonoBehaviour
         {
             //the player will move left
             transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
+            facingRight = false;
         }
 
         //if D is pressed
@@ -62,6 +66,8 @@ public class PlayerController : MonoBehaviour
         {
             //the player will move right
             transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            facingRight = true;
         }
 
         //if space bar is pressed

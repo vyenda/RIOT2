@@ -38,7 +38,7 @@ public class EnemyL1D1 : MonoBehaviour
     void Start()
     {
         StartCoroutine(Recharge(13));
-        StartCoroutine(Pause(2));
+        StartCoroutine(Pause(1));
     }
 
     // Update is called once per frame
@@ -84,6 +84,7 @@ public class EnemyL1D1 : MonoBehaviour
             {
                 temp = Vector3.left;
                 SetRandomDirectionSwitch();
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
                 goingRight = false;
             }
         }
@@ -93,6 +94,7 @@ public class EnemyL1D1 : MonoBehaviour
             {
                 temp = Vector3.right;
                 SetRandomDirectionSwitch();
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
                 goingRight = true;
             }
         }
@@ -122,7 +124,7 @@ public class EnemyL1D1 : MonoBehaviour
         HitPlayer();
         yield return new WaitForSeconds(secondsToWait);
         attack = false;
-        StartCoroutine(Pause(2));
+        StartCoroutine(Pause(1));
     }
 
     /// <summary>
@@ -135,7 +137,7 @@ public class EnemyL1D1 : MonoBehaviour
         pause = true;
         yield return new WaitForSeconds(secondsToWait);
         pause = false;
-        StartCoroutine(Attack(2));
+        StartCoroutine(Attack(1));
     }
     //maybe in the future we can try a raycast so that the enemy doesn't start the
     //attack coroutine unless the player game object is nearby
