@@ -12,6 +12,9 @@ TagManager:
   - Bullet
   - EnemyArm
   - AttackUp
+  - HealthPickup
+  - AttackTwo
+  - AttackThree
   layers:
   - Default
   - TransparentFX
