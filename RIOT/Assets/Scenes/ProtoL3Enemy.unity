@@ -335,6 +335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adc9ba2b04773847a8c722a5270f9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 13
+  minX: -26
+  maxX: 26
+  goingRight: 1
+  health: 150
+  playerDamage: 15
+  swordDamage: 20
 --- !u!1 &1421767343
 GameObject:
   m_ObjectHideFlags: 0
