@@ -97,12 +97,14 @@ public class PlayerController : MonoBehaviour
             healthPoints = health;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        //lets the player do a punch attack
+        if (Input.GetKeyDown(KeyCode.K))
         {
             armAnimation.Play("ArmAnimation");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        //lets the player do a sword attack
+        if (Input.GetKeyDown(KeyCode.L))
         {
             swordAnimation.Play("SwordAnimation");
         }
