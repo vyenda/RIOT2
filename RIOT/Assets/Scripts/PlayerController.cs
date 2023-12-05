@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/28/2023]
+ * Date Last Modified: [12/05/2023]
  * Codes for the player movement, and more.
  */
 
@@ -169,6 +169,50 @@ public class PlayerController : MonoBehaviour
             enemy1.playerDamage = 15f;
             enemy1.swordDamage = 20f;
         }
+        attackUp = false;
+    }
+
+    /// <summary>
+    /// this will make the attack up work for the second enemy
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator AttackTwo(float secondsToWait)
+    {
+        attackUp = true;
+
+        L2D1Enemy enemy2 = FindObjectOfType<L2D1Enemy>();
+        if (enemy2 != null)
+        {
+            enemy2.playerDamage = 20f;
+            enemy2.swordDamage = 25f;
+            yield return new WaitForSeconds(secondsToWait);
+            enemy2.playerDamage = 15f;
+            enemy2.swordDamage = 20f;
+        }
+
+        attackUp = false;
+    }
+
+    /// <summary>
+    /// this will make the attack up work for the third enemy
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator AttackThree(float secondsToWait)
+    {
+        attackUp = true;
+
+        EnemyL3D1 enemy3 = FindObjectOfType<EnemyL3D1>();
+        if (enemy3 != null)
+        {
+            enemy3.playerDamage = 20f;
+            enemy3.swordDamage = 25f;
+            yield return new WaitForSeconds(secondsToWait);
+            enemy3.playerDamage = 15f;
+            enemy3.swordDamage = 20f;
+        }
+
         attackUp = false;
     }
 

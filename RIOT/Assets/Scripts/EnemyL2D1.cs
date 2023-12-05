@@ -15,6 +15,9 @@ public class L2D1Enemy : MonoBehaviour
     public float speed;
     public float enemyHealthPoints = 100f;
 
+    public float playerDamage = 15f;
+    public float swordDamage = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
