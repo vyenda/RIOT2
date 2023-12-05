@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public bool shield = false;
     public bool recharge = false;
 
+    public bool attackUp = false;
+
     public float enemyL1D1Damage = 5f;
     public GameObject effect;
 
@@ -137,7 +139,44 @@ public class PlayerController : MonoBehaviour
         {
             healthPoints += other.gameObject.GetComponent<Pickup>().playerHeal;
         }
+
+        if (other.gameObject.tag == "AttackUp")
+        {
+            StartCoroutine(AttackUp(10));
+            Destroy(other.gameObject);
+        }
     }
+
+    /// <summary>
+    /// ups the player's attack on the enemy for the specified amount of time when called
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator AttackUp(float secondsToWait)
+    {
+        attackUp = true;
+
+        //this will need to be done here for each different enemy type
+        //this is a local variable that references the enemy script
+        EnemyL1D1 enemy1 = FindObjectOfType<EnemyL1D1>();
+        //it will tell the computer to search the entire scene for the enemy
+        //if it finds it, then it will run the code inside the if statement
+        if (enemy1 != null)
+        {
+            enemy1.playerDamage = 20f;
+            enemy1.swordDamage = 25f;
+            yield return new WaitForSeconds(secondsToWait);
+            enemy1.playerDamage = 15f;
+            enemy1.swordDamage = 20f;
+        }
+        attackUp = false;
+    }
+
+    /*private void AttackUp()
+    {
+        GetComponent<EnemyL1D1>().playerDamage = 20f;
+        GetComponent<EnemyL1D1>().swordDamage = 25f;
+    }*/
 
     /// <summary>
     /// codes for the player jumping; they have to touch the ground before jumping
