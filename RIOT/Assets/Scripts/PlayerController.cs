@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool attackUp = false;
 
     public float enemyL1D1Damage = 5f;
+    public float enemyL2D1Damage = 20f;
+    public float enemyL3D1Damage = 30f;
     public GameObject effect;
 
     public GameObject bulletPrefab;
@@ -143,6 +145,18 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "AttackUp")
         {
             StartCoroutine(AttackUp(10));
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "AttackTwo")
+        {
+            StartCoroutine(AttackTwo(10));
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "AttackThree")
+        {
+            StartCoroutine(AttackThree(10));
             Destroy(other.gameObject);
         }
     }

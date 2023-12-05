@@ -29,6 +29,9 @@ public class EnemyL3D1 : MonoBehaviour
     public float health = 150f;
     public float playerDamage = 15f;
     public float swordDamage = 20f;
+
+    //variables for pick up items
+    public bool attackUp = false;
     
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,33 @@ public class EnemyL3D1 : MonoBehaviour
         {
             health -= swordDamage;
         }
+
+        //the enemy's attack will go up if they touch this item
+        if (other.gameObject.tag == "AttackThree")
+        {
+            StartCoroutine(AttackThree(10));
+            Destroy(other.gameObject);
+        }
+    }
+
+    /// <summary>
+    /// ups the enemy's attack for a limited amount of time
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator AttackThree(float secondsToWait)
+    {
+        attackUp = true;
+
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.enemyL3D1Damage = 35f;
+            yield return new WaitForSeconds(secondsToWait);
+            player.enemyL3D1Damage = 30f;
+        }
+
+        attackUp = false;
     }
 
     /// <summary>

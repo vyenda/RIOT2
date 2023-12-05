@@ -32,6 +32,8 @@ public class EnemyL1D1 : MonoBehaviour
     public bool attack = false;
     public bool pause = false;
 
+    public bool attackUp = false;
+
     public Animation enemyArm;
 
     // Start is called before the first frame update
@@ -67,10 +69,36 @@ public class EnemyL1D1 : MonoBehaviour
             }
         }
 
+        if (other.gameObject.tag == "AttackUp")
+        {
+            StartCoroutine(AttackUp(10));
+            Destroy(other.gameObject);
+        }
+
         /*if (other.gameObject.tag == "Bullet")
         {
             health -= gunDamage;
         }*/
+    }
+
+    /// <summary>
+    /// ups the attack of the enemy for the specified period of time when called
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator AttackUp(float secondsToWait)
+    {
+        attackUp = true;
+
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.enemyL1D1Damage = 15f;
+            yield return new WaitForSeconds(secondsToWait);
+            player.enemyL1D1Damage = 5f;
+        }
+
+        attackUp = false;
     }
 
     /// <summary>
