@@ -11,6 +11,7 @@ TagManager:
   - PlayerSword
   - Bullet
   - EnemyArm
+  - AttackUp
   layers:
   - Default
   - TransparentFX
