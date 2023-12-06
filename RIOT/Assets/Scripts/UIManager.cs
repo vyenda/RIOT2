@@ -14,6 +14,10 @@ public class UIManager : MonoBehaviour
 {
     public PlayerController playerController;
     public TMP_Text playerHealth;
+    public TMP_Text enemy1Health;
+    public L2D1Enemy EnemyL2D1;
+    public TMP_Text enemy2Health;
+    public TMP_Text enemy3Health;
     
     // Start is called before the first frame update
     void Start()
