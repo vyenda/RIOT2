@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43480277, g: 0.47228307, b: 0.510111, a: 1}
+  m_IndirectSpecularColor: {r: 0.4348029, g: 0.47228348, b: 0.51011133, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4249cf9fae936842815db6e151a778a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTarget: {fileID: 0}
+  playerTarget: {fileID: 42130341}
   speed: 5.5
   enemyHealthPoints: 100
   playerDamage: 15
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 14119511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.9, y: 1.96, z: -0.29}
+  m_LocalPosition: {x: 16.83, y: 1.12, z: 1.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -358,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 42130341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2, y: 2, z: 0}
+  m_LocalPosition: {x: -14.2, y: 1.39, z: 1.77}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
