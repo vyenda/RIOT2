@@ -14,8 +14,10 @@ public class UIManager : MonoBehaviour
 {
     public PlayerController playerController;
     public TMP_Text playerHealth;
+
     public TMP_Text easyE1H;
-    public L2D1Enemy easyE2;
+    public L2D1Enemy l2D1Enemy;
+   
     public TMP_Text easyE2H;
     public TMP_Text easyE3H;
     public TMP_Text hardE1H;
