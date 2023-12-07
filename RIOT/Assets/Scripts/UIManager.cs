@@ -17,9 +17,13 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text easyE1H;
     public L2D1Enemy l2D1Enemy;
-   
+
     public TMP_Text easyE2H;
+    public EnemyL1D1 EnemyL1D1;
+
+
     public TMP_Text easyE3H;
+
     public TMP_Text hardE1H;
     public TMP_Text hardE2H;
     public TMP_Text hardE3H;
@@ -34,5 +38,6 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         playerHealth.text = "Player HP: " + playerController.healthPoints.ToString();
+        easyE1H.text = "Enemy 1 HP: " + EnemyL1D1.health.ToString();
     }
 }

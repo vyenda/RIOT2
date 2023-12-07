@@ -35,6 +35,7 @@ public class EnemyL1D1 : MonoBehaviour
     public bool attackUp = false;
 
     public Animation enemyArm;
+    internal string text;
 
     // Start is called before the first frame update
     void Start()

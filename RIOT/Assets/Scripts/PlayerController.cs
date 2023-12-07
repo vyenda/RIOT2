@@ -133,8 +133,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "L2D1Enemy")
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
-            healthPoints -= 15f;
+            // Instantiate(effect, transform.position, Quaternion.identity);
+            healthPoints -= 20f;
         }
 
         if (other.gameObject.tag == "HealthPickup")
