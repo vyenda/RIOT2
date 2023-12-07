@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     public float enemyL1D1Damage = 5f;
     public float enemyL2D1Damage = 20f;
-    public float enemyL3D1Damage = 30f;
+    public float enemyL3D1Damage = 15f;
     public GameObject effect;
 
     public GameObject bulletPrefab;
