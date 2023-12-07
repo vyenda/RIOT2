@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43480277, g: 0.47228307, b: 0.510111, a: 1}
+  m_IndirectSpecularColor: {r: 0.4348029, g: 0.47228348, b: 0.51011133, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 1109430383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2, y: 2, z: 0}
+  m_LocalPosition: {x: -14.2, y: 2, z: -0.33}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 1160289207}
   - component: {fileID: 1160289206}
   m_Layer: 5
-  m_Name: Enemy 1 Health
+  m_Name: Enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 't Enemy 1 HP: 0'
+  m_text: 't Enemy 2 HP: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1196,7 +1196,7 @@ Transform:
   m_GameObject: {fileID: 1454408019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -0.38}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1234,13 +1234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764eb8bbe15cfa148a29e6fd10d86f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 1109430384}
   playerHealth: {fileID: 816644626}
-  easyE1H: {fileID: 1160289206}
-  l2D1Enemy: {fileID: 0}
-  easyE2H: {fileID: 0}
-  EnemyL1D1: {fileID: 0}
+  easyE1H: {fileID: 0}
+  enemyL1D1: {fileID: 0}
+  easyE2H: {fileID: 1160289206}
+  enemyL3D1: {fileID: 1454408020}
   easyE3H: {fileID: 0}
+  l2D1Enemy: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
   hardE3H: {fileID: 0}
