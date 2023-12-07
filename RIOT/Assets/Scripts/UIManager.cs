@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
         playerHealth.text = "Player HP: " + playerController.healthPoints.ToString();
         easyE1H.text = "Enemy 1 HP: " + EnemyL1D1.health.ToString();
