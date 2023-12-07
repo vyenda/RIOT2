@@ -84,9 +84,9 @@ public class EnemyL3D1 : MonoBehaviour
         PlayerController player = FindObjectOfType<PlayerController>();
         if (player != null)
         {
-            player.enemyL3D1Damage = 35f;
+            player.enemyL3D1Damage = 20f;
             yield return new WaitForSeconds(secondsToWait);
-            player.enemyL3D1Damage = 30f;
+            player.enemyL3D1Damage = 15f;
         }
 
         attackUp = false;
