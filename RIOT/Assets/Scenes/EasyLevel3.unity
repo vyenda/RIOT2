@@ -242,7 +242,7 @@ MonoBehaviour:
   enemyL1D1Damage: 5
   enemyL2D1Damage: 20
   enemyL3D1Damage: 30
-  effect: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9, type: 3}
+  effect: {fileID: 0}
   bulletPrefab: {fileID: 1309680358834734448, guid: 10e3b2389da53f24b844a219192b04e8, type: 3}
   shootRight: 0
   minX: -18
@@ -1349,10 +1349,11 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerHealth: {fileID: 1950670921}
   easyE1H: {fileID: 371774639}
-  l2D1Enemy: {fileID: 0}
+  enemyL1D1: {fileID: 0}
   easyE2H: {fileID: 0}
-  EnemyL1D1: {fileID: 0}
+  enemyL3D1: {fileID: 0}
   easyE3H: {fileID: 0}
+  l2D1Enemy: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
   hardE3H: {fileID: 0}

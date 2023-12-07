@@ -302,7 +302,7 @@ public class PlayerController : MonoBehaviour
     {
         if (healthPoints <= 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(8);
             Debug.Log("The player died. Game over.");
         }
     }
