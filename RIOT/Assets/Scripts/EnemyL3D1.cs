@@ -26,7 +26,7 @@ public class EnemyL3D1 : MonoBehaviour
     private Vector3 temp;
 
     //variables for enemy health
-    public float health = 150f;
+    public float health = 100f;
     public float playerDamage = 15f;
     public float swordDamage = 20f;
 
