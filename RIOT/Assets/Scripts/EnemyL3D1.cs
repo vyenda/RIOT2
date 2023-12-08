@@ -35,13 +35,12 @@ public class EnemyL3D1 : MonoBehaviour
     public bool attackUp = false;
 
     public GameObject bulletsPrefab;
-
-    public float spawnrate = 4f;
+    public float spawnrate = 1f;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("ShootBullets", 0, spawnrate);
     }
 
     // Update is called once per frame
@@ -49,7 +48,6 @@ public class EnemyL3D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
-        InvokeRepeating("ShootBullets", 0, spawnrate);
         NextLevel();
     }
 
@@ -65,7 +63,7 @@ public class EnemyL3D1 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //the enemy will get hurt if they hit the player arm
-        if (other.gameObject.tag == "PlayerArm")
+        if (other.gameObject.tag == "PlayerArm") 
         {
             health -= playerDamage;
         }
