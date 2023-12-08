@@ -11,7 +11,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class EnemyL1D1 : MonoBehaviour
 {
-    public float speed;
+    public float speed = 5.5f;
     private float dist;
     public float health = 100f;
 

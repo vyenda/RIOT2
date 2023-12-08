@@ -1389,11 +1389,11 @@ MonoBehaviour:
   playerController: {fileID: 271531249}
   playerHealth: {fileID: 1622785834}
   easyE1H: {fileID: 1265493638}
-  enemyL1D1: {fileID: 2127457253}
+  enemyL1D1: {fileID: 2127457258}
   easyE2H: {fileID: 0}
   enemyL3D1: {fileID: 0}
   easyE3H: {fileID: 0}
-  l2D1Enemy: {fileID: 0}
+  enemyL1D2: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
   hardE3H: {fileID: 0}
@@ -1661,6 +1661,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1546452382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546452383}
+  m_Layer: 0
+  m_Name: Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546452383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546452382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5916598, y: 27.913105, z: 0.65479994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2090,7 +2121,7 @@ GameObject:
   - component: {fileID: 2127457256}
   - component: {fileID: 2127457255}
   - component: {fileID: 2127457254}
-  - component: {fileID: 2127457253}
+  - component: {fileID: 2127457258}
   m_Layer: 0
   m_Name: Enemy L1D1 (1)
   m_TagString: L1D1Enemy
@@ -2098,32 +2129,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2127457253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127457252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ca0d22e77a75745a2110cdddba307e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  health: 100
-  playerDamage: 15
-  swordDamage: 20
-  gunDamage: 25
-  minX: -17
-  maxX: 17
-  goingRight: 1
-  guard: 0
-  recharge: 0
-  attack: 0
-  pause: 0
-  attackUp: 0
-  enemyArm: {fileID: 695524778}
 --- !u!136 &2127457254
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2213,6 +2218,32 @@ Transform:
   - {fileID: 695524782}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127457258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127457252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ca0d22e77a75745a2110cdddba307e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.5
+  health: 100
+  playerDamage: 15
+  swordDamage: 20
+  gunDamage: 25
+  minX: -26
+  maxX: 26
+  goingRight: 1
+  guard: 0
+  recharge: 0
+  attack: 0
+  pause: 0
+  attackUp: 0
+  enemyArm: {fileID: 0}
 --- !u!1 &2137585124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,3 +2519,4 @@ SceneRoots:
   - {fileID: 271531254}
   - {fileID: 1288904076}
   - {fileID: 533416915}
+  - {fileID: 1546452383}

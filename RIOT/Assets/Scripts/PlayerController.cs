@@ -135,6 +135,8 @@ public class PlayerController : MonoBehaviour
                 // Instantiate(effect, transform.position, Quaternion.identity);
                 healthPoints -= 20f;
             }
+
+            
         }
 
         
@@ -197,7 +199,7 @@ public class PlayerController : MonoBehaviour
     {
         attackUp = true;
 
-        L2D1Enemy enemy2 = FindObjectOfType<L2D1Enemy>();
+        EnemyL1D2 enemy2 = FindObjectOfType<EnemyL1D2>();
         if (enemy2 != null)
         {
             enemy2.playerDamage = 20f;
