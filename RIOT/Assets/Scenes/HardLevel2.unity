@@ -975,7 +975,7 @@ MonoBehaviour:
   easyE1H: {fileID: 0}
   enemyL1D1: {fileID: 0}
   easyE3H: {fileID: 196300427}
-  enemyL3D1: {fileID: 1518829206}
+  enemyL3D1: {fileID: 0}
   easyE2H: {fileID: 0}
   enemyL1D2: {fileID: 0}
 --- !u!114 &952556249
@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 1518829209}
   - component: {fileID: 1518829208}
   - component: {fileID: 1518829207}
-  - component: {fileID: 1518829206}
+  - component: {fileID: 1518829211}
   m_Layer: 0
   m_Name: Enemy L3D1
   m_TagString: Untagged
@@ -1460,26 +1460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1518829206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518829205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2adc9ba2b04773847a8c722a5270f9d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 13
-  minX: -26
-  maxX: 26
-  goingRight: 1
-  health: 150
-  playerDamage: 15
-  swordDamage: 20
-  attackUp: 0
 --- !u!136 &1518829207
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1568,6 +1548,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518829211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518829205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cafe1464bd12156498248ca5f5f04f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  minX: -26
+  maxX: 26
+  goingRight: 1
+  health: 150
+  playerDamage: 15
+  swordDamage: 20
+  attackUp: 0
 --- !u!1 &1681629279
 GameObject:
   m_ObjectHideFlags: 0

@@ -992,11 +992,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 880556244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c60f656d96fb89c42818d34004b4be21, type: 3}
+  m_Script: {fileID: 11500000, guid: 4605e474b7808394eacef13da2fc820a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
   speed: 5.5
+  enemyDamage: 20
   playerDamage: 15
   swordDamage: 20
   playerTarget: {fileID: 1597625088}
@@ -2193,7 +2194,7 @@ MonoBehaviour:
   easyE3H: {fileID: 0}
   enemyL3D1: {fileID: 0}
   easyE2H: {fileID: 691912467}
-  enemyL1D2: {fileID: 880556248}
+  enemyL1D2: {fileID: 0}
 --- !u!114 &1884274782
 MonoBehaviour:
   m_ObjectHideFlags: 0
