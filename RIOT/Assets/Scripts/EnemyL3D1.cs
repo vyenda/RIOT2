@@ -55,7 +55,7 @@ public class EnemyL3D1 : MonoBehaviour
 
     private void ShootBullets()
     {
-        GameObject laserInstance = Instantiate(bulletsPrefab, transform.position, transform.rotation);
+        GameObject bulletsInstance = Instantiate(bulletsPrefab, transform.position, transform.rotation);
     }
 
     /// <summary>
