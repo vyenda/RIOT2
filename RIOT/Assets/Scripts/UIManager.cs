@@ -6,7 +6,7 @@ using TMPro;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/21/2023]
+ * Date Last Modified: [12/07/2023]
  * codes for the UI, such as the player and enemy health on screen
  */
 

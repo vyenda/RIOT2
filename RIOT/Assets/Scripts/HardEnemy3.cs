@@ -33,6 +33,10 @@ public class HardEnemy3 : MonoBehaviour
     {
         StartCoroutine(Recharge(13));
     }
+    /// <summary>
+    /// Controls the player collision interactions.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PlayerArm")
@@ -105,6 +109,9 @@ public class HardEnemy3 : MonoBehaviour
         NextLevel();
     }
 
+    /// <summary>
+    /// Moves onto the next level when enemy dies.
+    /// </summary>
     private void NextLevel()
     {
         if (health <= 0)

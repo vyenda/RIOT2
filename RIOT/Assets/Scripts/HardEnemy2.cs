@@ -12,6 +12,13 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class HardEnemy2 : MonoBehaviour
 {
+    //ideas for this enemy
+    //have them jump from time to time
+    //have the random movement deactivate if player is detected in raycast
+    //have the enemy only be able to take damage in one area (back, head, etc)
+    //will have a sword (maybe a gun too)?
+    //limit guarding ability compared to other enemies?
+
     //variables for movement
     public float speed;
     private float dist;
@@ -28,10 +35,20 @@ public class HardEnemy2 : MonoBehaviour
     //variables for pick up items
     public bool attackUp = false;
 
+    //public GameObject bulletsPrefab;
+    public float spawnrate = 1f;
+
+    //public bool shootRight = false;
+
+    public Animation enemySword;
+    public bool attack = false;
+    public bool pause = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //InvokeRepeating("ShootBullets", 0, spawnrate);
+        StartCoroutine(Pause(1));
     }
 
     // Update is called once per frame
@@ -39,8 +56,53 @@ public class HardEnemy2 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+
         NextLevel();
     }
+
+    /// <summary>
+    /// causes the enemy to periodically attack the player
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Attack(float secondsToWait)
+    {
+        attack = true;
+        HitPlayer();
+        yield return new WaitForSeconds(secondsToWait);
+        attack = false;
+        StartCoroutine(Pause(1));
+    }
+
+    /// <summary>
+    /// causes the enemy to pause from attacking the player
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
+    IEnumerator Pause(float secondsToWait)
+    {
+        pause = true;
+        yield return new WaitForSeconds(secondsToWait);
+        pause = false;
+        StartCoroutine(Attack(1));
+    }
+
+    /// <summary>
+    ///  starts the enemy attack animation 
+    /// </summary>
+    private void HitPlayer()
+    {
+        if (attack)
+        {
+            enemySword.Play("EnemySword");
+        }
+    }
+
+    /*private void ShootBullets()
+    {
+        GameObject bulletsInstance = Instantiate(bulletsPrefab, transform.position, transform.rotation);
+        bulletsInstance.GetComponent<Bullets>().goingRight = shootRight;
+    }*/
 
     /// <summary>
     /// codes for events that happen when this object interacts with other objects

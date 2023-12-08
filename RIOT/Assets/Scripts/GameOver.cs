@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
+ * Date Last Modified: [12/07/2023]
+ * codes for the UI, such as the player and enemy health on screen
+ */
+
 public class GameOver : MonoBehaviour
 {
     /// <summary>
