@@ -33,6 +33,10 @@ public class EnemyL3D1 : MonoBehaviour
 
     //variables for pick up items
     public bool attackUp = false;
+
+    public GameObject bulletsPrefab;
+
+    public float spawnrate = 4f;
     
     // Start is called before the first frame update
     void Start()
@@ -45,7 +49,13 @@ public class EnemyL3D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+        InvokeRepeating("ShootBullets", 0, spawnrate);
         NextLevel();
+    }
+
+    private void ShootBullets()
+    {
+        GameObject laserInstance = Instantiate(bulletsPrefab, transform.position, transform.rotation);
     }
 
     /// <summary>
@@ -151,7 +161,7 @@ public class EnemyL3D1 : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(4);
             Debug.Log("Enemy dead, next level.");
         }
     }
