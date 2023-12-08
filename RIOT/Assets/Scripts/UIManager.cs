@@ -23,10 +23,6 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text easyE2H;
     public EnemyL1D2 enemyL1D2;
-
-    public TMP_Text hardE1H;
-    public TMP_Text hardE2H;
-    public TMP_Text hardE3H;
     
     // Start is called before the first frame update
     void Start()

@@ -1390,9 +1390,9 @@ MonoBehaviour:
   playerHealth: {fileID: 1622785834}
   easyE1H: {fileID: 1265493638}
   enemyL1D1: {fileID: 2127457258}
-  easyE2H: {fileID: 0}
-  enemyL3D1: {fileID: 0}
   easyE3H: {fileID: 0}
+  enemyL3D1: {fileID: 0}
+  easyE2H: {fileID: 0}
   enemyL1D2: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
@@ -2234,7 +2234,6 @@ MonoBehaviour:
   health: 100
   playerDamage: 15
   swordDamage: 20
-  gunDamage: 25
   minX: -26
   maxX: 26
   goingRight: 1

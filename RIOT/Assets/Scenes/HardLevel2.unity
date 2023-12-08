@@ -970,17 +970,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764eb8bbe15cfa148a29e6fd10d86f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 1224094044}
   playerHealth: {fileID: 230175007}
-  easyE1H: {fileID: 196300427}
+  easyE1H: {fileID: 0}
   enemyL1D1: {fileID: 0}
+  easyE3H: {fileID: 196300427}
+  enemyL3D1: {fileID: 1518829206}
   easyE2H: {fileID: 0}
-  enemyL3D1: {fileID: 0}
-  easyE3H: {fileID: 0}
-  l2D1Enemy: {fileID: 0}
-  hardE1H: {fileID: 0}
-  hardE2H: {fileID: 0}
-  hardE3H: {fileID: 0}
+  enemyL1D2: {fileID: 0}
 --- !u!114 &952556249
 MonoBehaviour:
   m_ObjectHideFlags: 0
