@@ -1366,10 +1366,10 @@ MonoBehaviour:
   playerHealth: {fileID: 816644626}
   easyE1H: {fileID: 0}
   enemyL1D1: {fileID: 0}
-  easyE2H: {fileID: 1160289206}
+  easyE3H: {fileID: 1160289206}
   enemyL3D1: {fileID: 1454408020}
-  easyE3H: {fileID: 0}
-  l2D1Enemy: {fileID: 0}
+  easyE2H: {fileID: 0}
+  enemyL1D2: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
   hardE3H: {fileID: 0}

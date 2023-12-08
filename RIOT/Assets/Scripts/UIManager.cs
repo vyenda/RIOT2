@@ -18,10 +18,10 @@ public class UIManager : MonoBehaviour
     public TMP_Text easyE1H;
     public EnemyL1D1 enemyL1D1;
 
-    public TMP_Text easyE2H;
+    public TMP_Text easyE3H;
     public EnemyL3D1 enemyL3D1;
 
-    public TMP_Text easyE3H;
+    public TMP_Text easyE2H;
     public EnemyL1D2 enemyL1D2;
 
     public TMP_Text hardE1H;
@@ -33,14 +33,13 @@ public class UIManager : MonoBehaviour
     {
         
     }
-
+  
     // Update is called once per frame
     void Update() 
     {
         playerHealth.text = "Player HP: " + playerController.healthPoints.ToString();
         easyE1H.text = "Enemy 1 HP: " + enemyL1D1.health.ToString();
-        easyE2H.text = "Enemy 2 HP: " + enemyL3D1.health.ToString();
-        easyE3H.text = "Enemy 3 HP: " + enemyL1D2.health.ToString();
-      
+        easyE2H.text = "Enemy 3 HP: " + enemyL1D2.health.ToString();
+        easyE3H.text = "Enemy 2 HP: " + enemyL3D1.health.ToString();
     }
 }
