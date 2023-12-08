@@ -15,6 +15,7 @@ TagManager:
   - HealthPickup
   - AttackTwo
   - AttackThree
+  - Bullets
   layers:
   - Default
   - TransparentFX
