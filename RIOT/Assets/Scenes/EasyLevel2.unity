@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4348029, g: 0.47228348, b: 0.51011133, a: 1}
+  m_IndirectSpecularColor: {r: 0.43480277, g: 0.47228307, b: 0.510111, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764eb8bbe15cfa148a29e6fd10d86f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 416591160}
   playerHealth: {fileID: 816644626}
 --- !u!1001 &1738006124
 PrefabInstance:
@@ -2034,6 +2034,7 @@ GameObject:
   - component: {fileID: 1749507125}
   - component: {fileID: 1749507126}
   - component: {fileID: 1749507127}
+  - component: {fileID: 1749507128}
   m_Layer: 0
   m_Name: Sword
   m_TagString: EnemySword
@@ -2101,6 +2102,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &1749507128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749507124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1796121712
 GameObject:
   m_ObjectHideFlags: 0
