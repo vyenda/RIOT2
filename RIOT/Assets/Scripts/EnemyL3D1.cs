@@ -100,7 +100,6 @@ public class EnemyL3D1 : MonoBehaviour
         {
             Destroy(this.gameObject);
             Debug.Log("You killed the last enemy.");
-            //ADD CODE FOR SCENE TRANSITIONS HERE!!!
         }
     }
 
@@ -141,6 +140,7 @@ public class EnemyL3D1 : MonoBehaviour
     {
         dist = Random.Range(minX, maxX);
     }
+
     /// <summary>
     /// Moves onto the next level if the enemy dies.
     /// </summary>

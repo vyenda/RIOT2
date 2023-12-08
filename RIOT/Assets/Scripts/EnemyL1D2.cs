@@ -41,7 +41,7 @@ public class EnemyL1D2 : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(0);
             Debug.Log("Enemy dead, next level.");
         }
     }
