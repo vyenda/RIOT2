@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Scripting.APIUpdating;
 
 /*
@@ -48,6 +49,7 @@ public class EnemyL1D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+        NextLevel();
     }
 
     /// <summary>
@@ -219,6 +221,18 @@ public class EnemyL1D1 : MonoBehaviour
             //maybe add a waiting IEnumerator for 5 seconds
             //before moving to the next screen/level?
             //code for the scene transition here
+        }
+    }
+
+    /// <summary>
+    /// Moves onto the next level if enemy dies.
+    /// </summary>
+    private void NextLevel()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(3);
+            Debug.Log("Enemy dead, next level.");
         }
     }
 }

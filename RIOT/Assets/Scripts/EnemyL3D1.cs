@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
@@ -44,6 +45,7 @@ public class EnemyL3D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+        NextLevel();
     }
 
     /// <summary>
@@ -141,5 +143,16 @@ public class EnemyL3D1 : MonoBehaviour
     private void SetRandomDirectionSwitch()
     {
         dist = Random.Range(minX, maxX);
+    }
+    /// <summary>
+    /// Moves onto the next level if the enemy dies.
+    /// </summary>
+    private void NextLevel()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Enemy dead, next level.");
+        }
     }
 }
