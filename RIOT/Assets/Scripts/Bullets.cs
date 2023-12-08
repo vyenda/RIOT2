@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
+ * Date Last Modified: [12/07/2023]
+ * Codes for the first level, first difficulty enemy
+ */
+
 public class Bullets : MonoBehaviour
 {
     public float speed;
@@ -28,6 +34,10 @@ public class Bullets : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// destroys the object after 7 seconds
+    /// </summary>
+    /// <returns></returns>
     IEnumerator DespawnDelay()
     {
         yield return new WaitForSeconds(7f);

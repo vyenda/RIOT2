@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [12/04/2023]
+ * Date Last Modified: [12/07/2023]
  * Codes for the third and final enemy of the first difficulty level
  */
 
@@ -59,6 +59,11 @@ public class EnemyL3D1 : MonoBehaviour
         NextLevel();
     }
 
+    /// <summary>
+    /// makes the enemy periodically attack
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
     IEnumerator Attack(float secondsToWait)
     {
         attack = true;
@@ -68,6 +73,11 @@ public class EnemyL3D1 : MonoBehaviour
         StartCoroutine(Pause(1));
     }
 
+    /// <summary>
+    /// pauses the enemy attacks
+    /// </summary>
+    /// <param name="secondsToWait"></param>
+    /// <returns></returns>
     IEnumerator Pause(float secondsToWait)
     {
         pause = true;
@@ -76,6 +86,9 @@ public class EnemyL3D1 : MonoBehaviour
         StartCoroutine(Attack(1));
     }
 
+    /// <summary>
+    /// makes the hit animation play
+    /// </summary>
     private void HitPlayer()
     {
         if (attack)
