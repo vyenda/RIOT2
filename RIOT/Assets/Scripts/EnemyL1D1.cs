@@ -17,7 +17,6 @@ public class EnemyL1D1 : MonoBehaviour
 
     public float playerDamage = 15f;
     public float swordDamage = 20f;
-    public float gunDamage = 25f;
 
     //makes it so the enemy can't go off screen
     public float minX = -26f;

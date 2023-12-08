@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 14119514}
-  - component: {fileID: 14119513}
   - component: {fileID: 14119512}
+  - component: {fileID: 14119515}
   m_Layer: 0
   m_Name: L2D1Bat
   m_TagString: L2D1Enemy
@@ -162,24 +162,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &14119513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14119511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4249cf9fae936842815db6e151a778a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTarget: {fileID: 42130341}
-  speed: 5.5
-  enemyHealthPoints: 100
-  playerDamage: 15
-  swordDamage: 20
-  attackUp: 0
 --- !u!4 &14119514
 Transform:
   m_ObjectHideFlags: 0
@@ -198,6 +180,23 @@ Transform:
   - {fileID: 770559344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14119515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14119511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60f656d96fb89c42818d34004b4be21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  speed: 5.5
+  playerDamage: 15
+  swordDamage: 20
+  playerTarget: {fileID: 42130341}
 --- !u!1 &42130341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,7 +2205,7 @@ MonoBehaviour:
   easyE2H: {fileID: 371774639}
   enemyL3D1: {fileID: 0}
   easyE3H: {fileID: 0}
-  l2D1Enemy: {fileID: 14119513}
+  enemyL1D2: {fileID: 0}
   hardE1H: {fileID: 0}
   hardE2H: {fileID: 0}
   hardE3H: {fileID: 0}
