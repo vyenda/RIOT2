@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
  * Author(s): [Strong, Hannah]; [Arellano, Angeleen]
- * Date Last Modified: [11/26/2023]
+ * Date Last Modified: [12/07/2023]
  * Codes for pickup items.
  */
 
@@ -24,6 +24,10 @@ public class Pickup : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Controls the interactions with player collision
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
