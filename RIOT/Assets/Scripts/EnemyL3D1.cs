@@ -11,9 +11,12 @@ using UnityEngine.SceneManagement;
 
 public class EnemyL3D1 : MonoBehaviour
 {
+    //ideas for this enemy
+    //have them jump from time to time
+    //have the random movement deactivate if player is detected in raycast
+    //have the enemy only be able to take damage in one area (back, head, etc)
+    //will have a sword (maybe a gun too)?
     //limit guarding ability compared to other enemies?
-    //have a gun
-    //raycast for player
 
     //variables for movement
     public float speed;
