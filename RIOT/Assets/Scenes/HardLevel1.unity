@@ -1213,12 +1213,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 513162784}
   playerHealth: {fileID: 68157102}
-  easyE1H: {fileID: 2067160981}
+  easyE1H: {fileID: 0}
   enemyL1D1: {fileID: 0}
   easyE3H: {fileID: 0}
   enemyL3D1: {fileID: 0}
   easyE2H: {fileID: 0}
   enemyL1D2: {fileID: 0}
+  hardE1H: {fileID: 2067160981}
+  hardEnemy1: {fileID: 1402555788}
+  hardE2H: {fileID: 0}
+  hardEnemy2: {fileID: 0}
+  hardE3H: {fileID: 0}
+  hardEnemy3: {fileID: 0}
 --- !u!114 &690845035
 MonoBehaviour:
   m_ObjectHideFlags: 0
