@@ -36,11 +36,13 @@ public class EnemyL3D1 : MonoBehaviour
 
     public GameObject bulletsPrefab;
     public float spawnrate = 1f;
-    
+
+    public bool shootRight = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("ShootBullets", 0, spawnrate);
+        //InvokeRepeating("ShootBullets", 0, spawnrate);
     }
 
     // Update is called once per frame
@@ -51,10 +53,11 @@ public class EnemyL3D1 : MonoBehaviour
         NextLevel();
     }
 
-    private void ShootBullets()
+    /*private void ShootBullets()
     {
         GameObject bulletsInstance = Instantiate(bulletsPrefab, transform.position, transform.rotation);
-    }
+        bulletsInstance.GetComponent<Bullets>().goingRight = shootRight;
+    }*/
 
     /// <summary>
     /// codes for events that happen when this object interacts with other objects

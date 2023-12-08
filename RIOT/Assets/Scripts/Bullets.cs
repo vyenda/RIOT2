@@ -6,6 +6,7 @@ public class Bullets : MonoBehaviour
 {
     public float speed;
     public GameObject player;
+    public bool goingRight;
     
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,14 @@ public class Bullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        if (goingRight)
+        {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
 
     }
 
