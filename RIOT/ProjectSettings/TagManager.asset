@@ -16,6 +16,7 @@ TagManager:
   - AttackTwo
   - AttackThree
   - Bullets
+  - EnemySword
   layers:
   - Default
   - TransparentFX

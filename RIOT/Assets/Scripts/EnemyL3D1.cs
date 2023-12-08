@@ -34,15 +34,20 @@ public class EnemyL3D1 : MonoBehaviour
     //variables for pick up items
     public bool attackUp = false;
 
-    public GameObject bulletsPrefab;
+    //public GameObject bulletsPrefab;
     public float spawnrate = 1f;
 
-    public bool shootRight = false;
+    //public bool shootRight = false;
+
+    public Animation enemySword;
+    public bool attack = false;
+    public bool pause = false;
 
     // Start is called before the first frame update
     void Start()
     {
         //InvokeRepeating("ShootBullets", 0, spawnrate);
+        StartCoroutine(Pause(1));
     }
 
     // Update is called once per frame
@@ -50,7 +55,33 @@ public class EnemyL3D1 : MonoBehaviour
     {
         Move();
         EnemyHealth();
+
         NextLevel();
+    }
+
+    IEnumerator Attack(float secondsToWait)
+    {
+        attack = true;
+        HitPlayer();
+        yield return new WaitForSeconds(secondsToWait);
+        attack = false;
+        StartCoroutine(Pause(1));
+    }
+
+    IEnumerator Pause(float secondsToWait)
+    {
+        pause = true;
+        yield return new WaitForSeconds(secondsToWait);
+        pause = false;
+        StartCoroutine(Attack(1));
+    }
+
+    private void HitPlayer()
+    {
+        if (attack)
+        {
+            enemySword.Play("EnemySword");
+        }
     }
 
     /*private void ShootBullets()

@@ -136,6 +136,11 @@ public class PlayerController : MonoBehaviour
                 healthPoints -= 20f;
             }
 
+            if (other.gameObject.tag == "EnemySword")
+            {
+                health -= enemyL3D1Damage;
+            }
+
             
         }
 
